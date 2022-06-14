@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>去除标点符号 - By JiJi</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .area {
+        width: 300px;
+        height: 400px;
+      }
+    </style>
+    <script>
+      const remove_punc = () => {
+        const srcText = document.getElementById('src').value;
+        text = srcText.replace(/[`:_.~!@#$%^&*() \+ =<>?"{}|, \/ ;' \\ [ \] ·~！@#￥%……&*（）—— \+ ={}|《》？：“”【】、；‘’，。、\r\n]/g, '');
+        text = text.split('').join('　');
+        document.getElementById('dst').value = text;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>去除标点符号并加空格</h1>
+    <textarea id="src" class="area"></textarea>
+    <input type="button" onclick="remove_punc()" value="点击执行→" />
+    <textarea id="dst" class="area"></textarea>
+    <h6>By <a href="https://mmdjiji.com">JiJi</a></h6>
+  </body>
+</html>
